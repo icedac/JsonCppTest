@@ -1,5 +1,6 @@
 ﻿JsonCppTest
 =====
+ test source code : simple benchmarks of 3 json c++ libraries.
 
 ##tested environments.
 
