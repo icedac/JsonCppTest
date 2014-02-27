@@ -9,6 +9,7 @@
 #include <functional>
 #include <vector>
 #include <fstream>
+#include <memory>
 
 int test_rapidjson(const std::string& json_str);
 int test_libjson(const std::string& json_str);
@@ -47,7 +48,7 @@ JsonTestWrapper* parse_libjson(const std::string& json_str);
 JsonTestWrapper* parse_jsoncpp(const std::string& json_str);
 typedef std::function< JsonTestWrapper* (const std::string&) > parse_json_f;
 
-void json_tester(const std::string& name, parse_json_f p, const std::vector< std::string >& json_files, int parse_count, int write_count)
+void json_tester(const std::string& name, parse_json_f parse_json, const std::vector< std::string >& json_files, int parse_count, int write_count)
 {
 	std::vector< std::string > json_strings;
 	for (auto s : json_files)
@@ -63,16 +64,17 @@ void json_tester(const std::string& name, parse_json_f p, const std::vector< std
 		json_strings.push_back(json_str);
 	}
 
-	std::vector< JsonTestWrapper* > json_objs;
+	typedef std::unique_ptr< JsonTestWrapper > JTW_ptr;
+	std::vector< JTW_ptr > json_objs;
 	for (auto s : json_strings)
-		json_objs.push_back(p(s));
+		json_objs.push_back( JTW_ptr(parse_json(s)) );
 
 	// parse test
 	std::cout << name.c_str() << ": parsing [" << parse_count << "]loops";
 	auto start = std::chrono::high_resolution_clock::now();
 	for (int i = 0; i < parse_count; ++i)
 	{
-		for (auto json : json_objs)
+		for (auto& json : json_objs)
 		{
 			json->Parse();
 		}
@@ -84,12 +86,13 @@ void json_tester(const std::string& name, parse_json_f p, const std::vector< std
 	start = std::chrono::high_resolution_clock::now();
 	for (int i = 0; i < write_count; ++i)
 	{
-		for (auto json : json_objs)
+		for (auto& json : json_objs)
 		{
 			json->Write();
 		}
 	}
 	end = std::chrono::high_resolution_clock::now();	std::cout << " [" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "]msec\n";
+
 }
 
 int _tmain(int argc, _TCHAR* argv[])
