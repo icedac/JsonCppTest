@@ -1,6 +1,14 @@
 ﻿JsonCppTest
 =====
 
+##tested environments.
+
+- Windows 7 x64
+- Intel Core i7 4770K Quad-core / 16GB Ram
+- Visual Studio 2013
+
+##tested libraries.
+
 following json lib for c++ tested.
 
 - libjson - http://sourceforge.net/projects/libjson/
