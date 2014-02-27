@@ -9,4 +9,5 @@ following json lib for c++ tested.
 
 ##results:
 
+﻿![](http://www.haxeflixel.com/images/haxeflixel-logo-black.png)
 
