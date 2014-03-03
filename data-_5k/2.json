@@ -1,0 +1,17 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "dec0e3ca-2400-4a76-b09b-a08124154f9a", 
+        "name": "Erma White", 
+        "randomArrayItem": "lemon", 
+        "gender": "female", 
+        "age": 28, 
+        "longitude": -50.780003999999998, 
+        "email": "ermawhite@zentility.com", 
+        "latitude": -39.275694999999999, 
+        "balance": "$1,026.00", 
+        "company": "Zentility", 
+        "id": 0, 
+        "isActive": true
+    }
+]

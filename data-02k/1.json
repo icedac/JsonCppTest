@@ -1,0 +1,84 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "88611552-6d25-43f8-9d8e-8b807ec9ff39", 
+        "name": "Taylor Holt", 
+        "randomArrayItem": "lemon", 
+        "tags": [
+            "excepteur", 
+            "occaecat", 
+            "cillum", 
+            "est", 
+            "qui", 
+            "veniam", 
+            "ea"
+        ], 
+        "gender": "female", 
+        "age": 30, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Dalton Moreno"
+            }, 
+            {
+                "id": 1, 
+                "name": "Odonnell Jennings"
+            }, 
+            {
+                "id": 2, 
+                "name": "Laverne Decker"
+            }
+        ], 
+        "registered": "1993-12-17T12:39:39 -09:00", 
+        "longitude": -78.134827000000001, 
+        "email": "taylorholt@savvy.com", 
+        "phone": "+1 (838) 538-3302", 
+        "address": "230 Ide Court, Ironton, Maryland, 6842", 
+        "latitude": 45.213697000000003, 
+        "balance": "$1,887.00", 
+        "company": "Savvy", 
+        "id": 0, 
+        "isActive": false
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "7b1ac299-2c82-4f86-9e14-bba0d6044a2d", 
+        "name": "Short Garza", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "eu", 
+            "aliqua", 
+            "dolor", 
+            "consequat", 
+            "nulla", 
+            "duis", 
+            "et"
+        ], 
+        "gender": "male", 
+        "age": 29, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Schneider Pena"
+            }, 
+            {
+                "id": 1, 
+                "name": "Keisha Norman"
+            }, 
+            {
+                "id": 2, 
+                "name": "Mckenzie Elliott"
+            }
+        ], 
+        "registered": "1994-08-23T14:26:07 -09:00", 
+        "longitude": -134.36481000000001, 
+        "email": "shortgarza@moreganic.com", 
+        "phone": "+1 (884) 596-3725", 
+        "address": "664 Guider Avenue, Goochland, Ohio, 737", 
+        "latitude": 55.870389000000003, 
+        "balance": "$3,187.00", 
+        "company": "Moreganic", 
+        "id": 1, 
+        "isActive": false
+    }
+]

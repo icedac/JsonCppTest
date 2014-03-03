@@ -1,0 +1,84 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "6ca1ae05-a159-4a1c-a1a0-c316cbf14d45", 
+        "name": "Marcy Gill", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "ex", 
+            "reprehenderit", 
+            "sit", 
+            "in", 
+            "eiusmod", 
+            "fugiat", 
+            "excepteur"
+        ], 
+        "gender": "female", 
+        "age": 32, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Gibbs Dudley"
+            }, 
+            {
+                "id": 1, 
+                "name": "Tessa Vasquez"
+            }, 
+            {
+                "id": 2, 
+                "name": "Eva Lloyd"
+            }
+        ], 
+        "registered": "2008-01-05T11:25:44 -09:00", 
+        "longitude": 18.436007, 
+        "email": "marcygill@optique.com", 
+        "phone": "+1 (877) 485-3209", 
+        "address": "648 Whitty Lane, Springville, Florida, 5320", 
+        "latitude": 32.979227999999999, 
+        "balance": "$3,481.00", 
+        "company": "Optique", 
+        "id": 0, 
+        "isActive": true
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "450da0f9-b17c-4150-9c78-86738ef44633", 
+        "name": "Marilyn Lynch", 
+        "randomArrayItem": "lemon", 
+        "tags": [
+            "duis", 
+            "eiusmod", 
+            "labore", 
+            "ipsum", 
+            "reprehenderit", 
+            "nisi", 
+            "qui"
+        ], 
+        "gender": "female", 
+        "age": 28, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Shauna Haley"
+            }, 
+            {
+                "id": 1, 
+                "name": "Kathie Hart"
+            }, 
+            {
+                "id": 2, 
+                "name": "Vincent Buckner"
+            }
+        ], 
+        "registered": "2010-07-13T12:16:47 -09:00", 
+        "longitude": 155.534693, 
+        "email": "marilynlynch@singavera.com", 
+        "phone": "+1 (893) 547-2273", 
+        "address": "579 Ridge Court, Irwin, Rhode Island, 7520", 
+        "latitude": 11.883392000000001, 
+        "balance": "$3,475.00", 
+        "company": "Singavera", 
+        "id": 1, 
+        "isActive": true
+    }
+]

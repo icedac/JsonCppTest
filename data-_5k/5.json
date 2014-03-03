@@ -1,0 +1,17 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "7ee60ddc-6809-4a99-b16e-5b876ce884d8", 
+        "name": "Elma Stanley", 
+        "randomArrayItem": "cherry", 
+        "gender": "female", 
+        "age": 22, 
+        "longitude": -101.27108800000001, 
+        "email": "elmastanley@orbalix.com", 
+        "latitude": -66.139194000000003, 
+        "balance": "$2,017.00", 
+        "company": "Orbalix", 
+        "id": 0, 
+        "isActive": true
+    }
+]

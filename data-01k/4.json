@@ -1,0 +1,41 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "6cf1c2d7-ca28-48d1-812c-16e3f573defb", 
+        "name": "Wilcox Bradshaw", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "deserunt", 
+            "magna", 
+            "pariatur", 
+            "reprehenderit", 
+            "aliqua", 
+            "adipisicing", 
+            "commodo"
+        ], 
+        "gender": "male", 
+        "age": 25, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Pennington Bentley"
+            }, 
+            {
+                "id": 1, 
+                "name": "Cherie Levy"
+            }, 
+            {
+                "id": 2, 
+                "name": "White Guerrero"
+            }
+        ], 
+        "longitude": 30.041734000000002, 
+        "email": "wilcoxbradshaw@gronk.com", 
+        "phone": "+1 (957) 558-3980", 
+        "latitude": -16.550746, 
+        "balance": "$1,759.00", 
+        "company": "Gronk", 
+        "id": 0, 
+        "isActive": true
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "721ba605-5ae6-4c74-a556-4f45145fc8f5", 
+        "name": "English Padilla", 
+        "randomArrayItem": "lemon", 
+        "gender": "male", 
+        "age": 24, 
+        "longitude": -158.920478, 
+        "email": "englishpadilla@zialactic.com", 
+        "latitude": -88.376176000000001, 
+        "balance": "$2,360.00", 
+        "company": "Zialactic", 
+        "id": 0, 
+        "isActive": true
+    }
+]

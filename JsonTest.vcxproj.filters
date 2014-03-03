@@ -156,6 +156,9 @@
     <ClCompile Include="test_jsoncpp.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="test_push_back.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.md" />

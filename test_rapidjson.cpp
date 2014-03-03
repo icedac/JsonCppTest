@@ -9,83 +9,95 @@
 #include "rapidjson/filestream.h"	// wrapper of C stream for prettywriter as output
 using namespace rapidjson;
 
-int test_rapidjson(const std::string& json_str)
-{
-	// printf("Original JSON:\n %s\n", json_str.c_str());
-
-	Document document;	// Default template parameter uses UTF8 and MemoryPoolAllocator.
-
-#if 0
-	// "normal" parsing, decode strings to new buffers. Can use other input stream via ParseStream().
-	if (document.Parse<0>(json).HasParseError())
-		return 1;
-#else
-	// In-situ parsing, decode strings directly in the source string. Source must be string.
-
-	// std::vector< char > buffer(json_str.c_str() );
-	std::vector<char> buffer(json_str.begin(), json_str.end());
-	buffer.push_back('\0');
-
-	if (document.ParseInsitu<0>(buffer.data()).HasParseError())
-		return 1;
-#endif
-
-	// printf("\nParsing to document succeeded.\n");
-	// printf("\nModified JSON with reformatting:\n");
-	//FileStream f(stdout);
-	//Writer<FileStream> writer(f);
-	//document.Accept(writer);	// Accept() traverses the DOM and generates Handler events.
-	//std::cout << std::endl;
-
-	ResultStringStream rss;
-	Writer< ResultStringStream > writer(rss);
-	document.Accept(writer);
-
-	std::cout << rss.str().c_str() << std::endl;
-
-	return 0;
-}
-
 struct NullStream {
 	NullStream() : length_(0) {}
 	void Put(char) { ++length_; }
 	size_t length_;
 };
 
+// std::string::push_back is toooooo slower than std::vector::push_back.
+struct OutputStringStream {
+	OutputStringStream(size_t size_hint = 1024) : length_(0) { str_.size();  str_.reserve(size_hint + 1); }
+	void Put(char c) { str_.push_back(c); ++length_; }
+	const std::string& GetString() const { return str_; }
+	std::string str_;
+	size_t length_;
+};
+
+struct FastOutputStringStream {
+	FastOutputStringStream(size_t size_hint = 1024) { buffer_.reserve(size_hint + 1); }
+	void Put(char c) { buffer_.push_back(c); }
+	std::string GetString() const { return buffer_.data(); }
+	
+	std::vector< char > buffer_;
+};
+
+struct OutputStringStream2 {
+	OutputStringStream2(size_t size_hint = 1024)
+	{ 
+		buffer_.resize(size_hint + 1); 
+		p_ = buffer_.data();
+	}
+	void Put(char c) 
+	{
+		++length_;
+#if 1
+		if (length_ > buffer_.size())
+		{
+			buffer_.resize(length_ * 2);
+			p_ = &(buffer_.data()[length_]);
+		}
+		*p_ = c; ++p_;
+#else
+		buffer_.push_back(c);
+#endif
+	}
+	std::string GetString() { 
+		buffer_.resize(length_);
+		return buffer_.data();
+	}
+
+	std::vector< char > buffer_;
+	size_t length_ = 0;
+	char* p_ = nullptr;
+};
+
 class JsonTestWrapper_rapidjson : public JsonTestWrapper
 {
 public:
-	JsonTestWrapper_rapidjson() {}
+	JsonTestWrapper_rapidjson() 
+	{
+	}
 	~JsonTestWrapper_rapidjson() {}
 
 	bool Parse() override
 	{
-		{
-			std::vector<char> buffer(json_str_.begin(), json_str_.end());
-			buffer.push_back('\0');
-			buffer_.swap(buffer);
-		}
-		
-		if (obj_.ParseInsitu<0>(buffer_.data()).HasParseError())
+#if 0
+		if (obj_.Parse<0>(json_str_.c_str()).HasParseError())
 			return false;
+#else
+		buffer_.resize(json_str_.size() + 1); // only allocate the temp memory first time
+		::memcpy(buffer_.data(), json_str_.c_str(), json_str_.size() + 1);
+		if (obj_.ParseInsitu<0>(buffer_.data() ).HasParseError())
+			return false;
+#endif
 		return true;
 	}
 
 	std::string Write() override
 	{
-#if 0
-		ResultStringStream rss;
-		Writer< ResultStringStream > writer(rss);
+#if 1
+		FastOutputStringStream rss(json_str_.size() + 1);
+		Writer< FastOutputStringStream > writer(rss);
 		obj_.Accept(writer);
 
-		return rss.str();
+		return rss.GetString();
 #else
 		NullStream ns;
 		Writer< NullStream > writer(ns);
 		obj_.Accept(writer);
 		return std::string();
 #endif
-
 	}
 
 private:

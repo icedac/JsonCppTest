@@ -1,0 +1,84 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "6a4f1b0a-f2d8-465f-88c4-b634a0aaf614", 
+        "name": "Lakisha Sosa", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "ad", 
+            "officia", 
+            "esse", 
+            "deserunt", 
+            "sit", 
+            "officia", 
+            "aute"
+        ], 
+        "gender": "female", 
+        "age": 23, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Eaton Dixon"
+            }, 
+            {
+                "id": 1, 
+                "name": "Shelton Bray"
+            }, 
+            {
+                "id": 2, 
+                "name": "Kelli Roberson"
+            }
+        ], 
+        "registered": "1991-10-28T07:46:23 -09:00", 
+        "longitude": -175.48802699999999, 
+        "email": "lakishasosa@zilphur.com", 
+        "phone": "+1 (967) 483-2178", 
+        "address": "917 Junius Street, Stockdale, Louisiana, 5580", 
+        "latitude": -29.683736, 
+        "balance": "$1,824.00", 
+        "company": "Zilphur", 
+        "id": 0, 
+        "isActive": false
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "7d843840-1710-4610-a06b-a6adbbbe1e9c", 
+        "name": "Charlotte Howe", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "commodo", 
+            "elit", 
+            "ut", 
+            "minim", 
+            "ut", 
+            "ex", 
+            "minim"
+        ], 
+        "gender": "female", 
+        "age": 20, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Elma Bonner"
+            }, 
+            {
+                "id": 1, 
+                "name": "Hendrix Barr"
+            }, 
+            {
+                "id": 2, 
+                "name": "Kathrine Henderson"
+            }
+        ], 
+        "registered": "1988-09-14T02:50:30 -09:00", 
+        "longitude": -65.649669000000003, 
+        "email": "charlottehowe@orbin.com", 
+        "phone": "+1 (913) 533-2979", 
+        "address": "158 Evergreen Avenue, Retsof, Delaware, 6881", 
+        "latitude": -3.8516560000000002, 
+        "balance": "$1,327.00", 
+        "company": "Orbin", 
+        "id": 1, 
+        "isActive": false
+    }
+]

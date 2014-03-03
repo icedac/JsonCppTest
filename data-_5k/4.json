@@ -1,0 +1,17 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "6db5efb5-2b82-4985-adf5-e9781171a451", 
+        "name": "Ophelia Mercer", 
+        "randomArrayItem": "lemon", 
+        "gender": "female", 
+        "age": 35, 
+        "longitude": -14.456889, 
+        "email": "opheliamercer@quailcom.com", 
+        "latitude": 75.25085, 
+        "balance": "$2,884.00", 
+        "company": "Quailcom", 
+        "id": 0, 
+        "isActive": true
+    }
+]

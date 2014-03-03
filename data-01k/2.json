@@ -1,0 +1,41 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "62139c1e-1adb-4dcf-8344-d561da51494a", 
+        "name": "Loretta Bowman", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "commodo", 
+            "enim", 
+            "sit", 
+            "esse", 
+            "tempor", 
+            "ex", 
+            "excepteur"
+        ], 
+        "gender": "female", 
+        "age": 37, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Kramer Davidson"
+            }, 
+            {
+                "id": 1, 
+                "name": "Kelly Horne"
+            }, 
+            {
+                "id": 2, 
+                "name": "Cohen Barnes"
+            }
+        ], 
+        "longitude": 114.43826300000001, 
+        "email": "lorettabowman@magmina.com", 
+        "phone": "+1 (932) 459-3030", 
+        "latitude": 21.172173999999998, 
+        "balance": "$3,428.00", 
+        "company": "Magmina", 
+        "id": 0, 
+        "isActive": false
+    }
+]

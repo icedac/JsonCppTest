@@ -1,0 +1,84 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "8f1b277e-f99a-428a-9fc5-028b2955788d", 
+        "name": "Katheryn Molina", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "consequat", 
+            "ad", 
+            "reprehenderit", 
+            "non", 
+            "aliquip", 
+            "officia", 
+            "exercitation"
+        ], 
+        "gender": "female", 
+        "age": 34, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Miranda Holman"
+            }, 
+            {
+                "id": 1, 
+                "name": "David Gallegos"
+            }, 
+            {
+                "id": 2, 
+                "name": "Winters Beck"
+            }
+        ], 
+        "registered": "1991-04-24T08:27:26 -09:00", 
+        "longitude": -8.7763200000000001, 
+        "email": "katherynmolina@sarasonic.com", 
+        "phone": "+1 (871) 495-3640", 
+        "address": "949 Tompkins Place, Sabillasville, Vermont, 4413", 
+        "latitude": 63.004392000000003, 
+        "balance": "$2,158.00", 
+        "company": "Sarasonic", 
+        "id": 0, 
+        "isActive": false
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "877b841d-72f4-4192-84c7-af71856ad2e6", 
+        "name": "Emerson Pierce", 
+        "randomArrayItem": "lemon", 
+        "tags": [
+            "ullamco", 
+            "dolore", 
+            "eiusmod", 
+            "ut", 
+            "aliqua", 
+            "est", 
+            "aliqua"
+        ], 
+        "gender": "male", 
+        "age": 26, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Howard Webb"
+            }, 
+            {
+                "id": 1, 
+                "name": "Mclean Lambert"
+            }, 
+            {
+                "id": 2, 
+                "name": "Nicole Nixon"
+            }
+        ], 
+        "registered": "2009-12-08T18:58:17 -09:00", 
+        "longitude": -89.925122000000002, 
+        "email": "emersonpierce@furnigeer.com", 
+        "phone": "+1 (976) 486-2618", 
+        "address": "918 Kermit Place, Gulf, California, 5127", 
+        "latitude": -60.051819000000002, 
+        "balance": "$1,239.00", 
+        "company": "Furnigeer", 
+        "id": 1, 
+        "isActive": true
+    }
+]

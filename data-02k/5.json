@@ -1,0 +1,84 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "3071d773-d328-4460-b752-bdb44871c02a", 
+        "name": "Graves Mcneil", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "ex", 
+            "cillum", 
+            "enim", 
+            "est", 
+            "deserunt", 
+            "mollit", 
+            "quis"
+        ], 
+        "gender": "male", 
+        "age": 36, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Dotson Curry"
+            }, 
+            {
+                "id": 1, 
+                "name": "Branch Buchanan"
+            }, 
+            {
+                "id": 2, 
+                "name": "Travis Moses"
+            }
+        ], 
+        "registered": "1989-05-15T22:01:52 -09:00", 
+        "longitude": -74.311785999999998, 
+        "email": "gravesmcneil@quantasis.com", 
+        "phone": "+1 (940) 569-3429", 
+        "address": "202 Dobbin Street, Idledale, Florida, 1001", 
+        "latitude": 1.172496, 
+        "balance": "$2,235.00", 
+        "company": "Quantasis", 
+        "id": 0, 
+        "isActive": false
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "77429b29-92bf-4340-a00d-1acf389ae4b5", 
+        "name": "Wynn Mcdaniel", 
+        "randomArrayItem": "lemon", 
+        "tags": [
+            "ex", 
+            "mollit", 
+            "ipsum", 
+            "aute", 
+            "nisi", 
+            "non", 
+            "fugiat"
+        ], 
+        "gender": "male", 
+        "age": 33, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Rosella Mosley"
+            }, 
+            {
+                "id": 1, 
+                "name": "Burnett Rowland"
+            }, 
+            {
+                "id": 2, 
+                "name": "Simon Valentine"
+            }
+        ], 
+        "registered": "2001-11-26T04:24:19 -09:00", 
+        "longitude": -132.18132800000001, 
+        "email": "wynnmcdaniel@zoarere.com", 
+        "phone": "+1 (980) 555-3306", 
+        "address": "429 Dupont Street, Nile, South Carolina, 4879", 
+        "latitude": 80.040936000000002, 
+        "balance": "$1,321.00", 
+        "company": "Zoarere", 
+        "id": 1, 
+        "isActive": true
+    }
+]

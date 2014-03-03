@@ -1,0 +1,166 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "fab44f9f-f6a0-4dca-b7c6-e2f2c0100672", 
+        "name": "Morton Mccormick", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "anim", 
+            "eiusmod", 
+            "nulla", 
+            "velit", 
+            "non", 
+            "reprehenderit", 
+            "anim"
+        ], 
+        "gender": "male", 
+        "age": 39, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Beulah Reese"
+            }, 
+            {
+                "id": 1, 
+                "name": "Cote Hernandez"
+            }, 
+            {
+                "id": 2, 
+                "name": "Cameron Faulkner"
+            }
+        ], 
+        "registered": "2002-09-25T05:52:56 -09:00", 
+        "longitude": -153.086085, 
+        "email": "mortonmccormick@orbixtar.com", 
+        "phone": "+1 (982) 582-2816", 
+        "address": "102 Quentin Road, Coventry, Alabama, 8798", 
+        "latitude": -8.8200269999999996, 
+        "balance": "$2,162.00", 
+        "company": "Orbixtar", 
+        "id": 0, 
+        "isActive": false
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "538994f8-059f-435d-94d9-5e9c2a57715c", 
+        "name": "Fitzgerald Witt", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "laborum", 
+            "eu", 
+            "consequat", 
+            "eiusmod", 
+            "quis", 
+            "excepteur", 
+            "qui"
+        ], 
+        "gender": "male", 
+        "age": 30, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Pitts Potter"
+            }, 
+            {
+                "id": 1, 
+                "name": "Jo Rodriquez"
+            }, 
+            {
+                "id": 2, 
+                "name": "Gladys Mcpherson"
+            }
+        ], 
+        "registered": "2006-08-14T15:45:09 -09:00", 
+        "longitude": -136.19359600000001, 
+        "email": "fitzgeraldwitt@fleetmix.com", 
+        "phone": "+1 (883) 592-3088", 
+        "address": "714 Richards Street, Leyner, Arkansas, 7709", 
+        "latitude": 78.130156999999997, 
+        "balance": "$3,912.00", 
+        "company": "Fleetmix", 
+        "id": 1, 
+        "isActive": false
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "a04f7962-6f44-4d0e-abf0-d69c403c533a", 
+        "name": "Griffin Fleming", 
+        "randomArrayItem": "lemon", 
+        "tags": [
+            "amet", 
+            "ad", 
+            "non", 
+            "id", 
+            "fugiat", 
+            "anim", 
+            "quis"
+        ], 
+        "gender": "male", 
+        "age": 40, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Natalie Pace"
+            }, 
+            {
+                "id": 1, 
+                "name": "Julie Case"
+            }, 
+            {
+                "id": 2, 
+                "name": "Johnnie Adams"
+            }
+        ], 
+        "registered": "1991-06-15T13:44:45 -09:00", 
+        "longitude": -119.853431, 
+        "email": "griffinfleming@amtap.com", 
+        "phone": "+1 (849) 427-2427", 
+        "address": "615 Dearborn Court, Soham, Alaska, 9732", 
+        "latitude": 57.378672999999999, 
+        "balance": "$3,526.00", 
+        "company": "Amtap", 
+        "id": 2, 
+        "isActive": true
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "beeab499-161c-41f5-a587-8035b8a0eb8d", 
+        "name": "Kelly Clark", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "labore", 
+            "mollit", 
+            "sunt", 
+            "reprehenderit", 
+            "incididunt", 
+            "veniam", 
+            "sint"
+        ], 
+        "gender": "female", 
+        "age": 29, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Hess Mitchell"
+            }, 
+            {
+                "id": 1, 
+                "name": "Luna Key"
+            }, 
+            {
+                "id": 2, 
+                "name": "Clarice Byrd"
+            }
+        ], 
+        "registered": "1997-04-08T13:38:11 -09:00", 
+        "longitude": 52.170271999999997, 
+        "email": "kellyclark@zillanet.com", 
+        "phone": "+1 (979) 459-2593", 
+        "address": "225 Wilson Street, Broadlands, North Dakota, 8321", 
+        "latitude": -37.657978, 
+        "balance": "$1,248.00", 
+        "company": "Zillanet", 
+        "id": 3, 
+        "isActive": false
+    }
+]

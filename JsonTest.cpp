@@ -11,8 +11,8 @@
 #include <fstream>
 #include <memory>
 
-int test_rapidjson(const std::string& json_str);
-int test_libjson(const std::string& json_str);
+// tr2 filesystem
+#include <filesystem>
 
 /*
 */
@@ -24,16 +24,24 @@ public:
 
 	bool Parse() override
 	{
-		data_ = std::string(this->json_str_);
+		std::vector<char> buffer(json_str_.begin(), json_str_.end());
+		buffer.push_back('\0');
+		buffer_.swap(buffer);
+
 		return true;
 	}
 	std::string Write() override
 	{
-		return std::string(data_);
+		std::string s;
+		s.reserve(buffer_.size() + 1);
+		//for (int i = 0; i < 50; ++i )
+		//	s += "0123456789";
+		s = buffer_.data();
+		return s;
 	}
 
 private:
-	std::string	data_;
+	std::vector< char > buffer_;
 };
 
 JsonTestWrapper* parse_memcpy(const std::string& json_str)
@@ -48,8 +56,21 @@ JsonTestWrapper* parse_libjson(const std::string& json_str);
 JsonTestWrapper* parse_jsoncpp(const std::string& json_str);
 typedef std::function< JsonTestWrapper* (const std::string&) > parse_json_f;
 
-void json_tester(const std::string& name, parse_json_f parse_json, const std::vector< std::string >& json_files, int parse_count, int write_count)
+using std::tr2::sys::path;
+using std::tr2::sys::directory_iterator;
+
+void json_tester(const std::string& name, parse_json_f parse_json, const std::string& json_dir, int parse_count, int write_count, int csv_mode = 1 )
 {
+	// iterates dir files;
+	std::vector< std::string > json_files;
+
+	auto json_path = path(json_dir);
+	for (auto it = directory_iterator(json_path); it != directory_iterator(); ++it)
+	{
+		const auto& file = it->path();
+		json_files.push_back( file.string() );
+	}
+
 	std::vector< std::string > json_strings;
 	for (auto s : json_files)
 	{
@@ -70,7 +91,10 @@ void json_tester(const std::string& name, parse_json_f parse_json, const std::ve
 		json_objs.push_back( JTW_ptr(parse_json(s)) );
 
 	// parse test
-	std::cout << name.c_str() << ": parsing [" << parse_count << "]loops";
+	if (csv_mode)
+		std::cout << name.c_str();
+	else
+		std::cout << name.c_str() << ": parsing [" << parse_count << "]loops";
 	auto start = std::chrono::high_resolution_clock::now();
 	for (int i = 0; i < parse_count; ++i)
 	{
@@ -79,67 +103,87 @@ void json_tester(const std::string& name, parse_json_f parse_json, const std::ve
 			json->Parse();
 		}
 	}
-	auto end = std::chrono::high_resolution_clock::now();	std::cout << " [" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "]msec\n";
+	auto end = std::chrono::high_resolution_clock::now();
+	if (csv_mode)
+		std::cout << ", " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+	else
+		std::cout << " [" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "]msec\n";
 
 	// write test
-	std::cout << name.c_str() << ": writing [" << write_count << "]loops";
+	if (csv_mode==0)
+		std::cout << name.c_str() << ": writing [" << write_count << "]loops";
 	start = std::chrono::high_resolution_clock::now();
 	for (int i = 0; i < write_count; ++i)
 	{
 		for (auto& json : json_objs)
 		{
-			json->Write();
+			std::string result = json->Write();
 		}
 	}
-	end = std::chrono::high_resolution_clock::now();	std::cout << " [" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "]msec\n";
-
+	end = std::chrono::high_resolution_clock::now();
+	if (csv_mode)
+		std::cout << ", " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << std::endl;
+	else
+		std::cout << " [" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "]msec\n";
 }
+
+struct lib_def
+{
+	std::string		lib_name;
+	parse_json_f	json_f;
+};
+
+struct test_def
+{
+	std::string		json_dir;
+	float			json_size_in_kb;
+	int				parse_count;
+	int				write_count;
+};
+
+void test_push_back();
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	//std::string json_str = " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, \"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
-	//std::string json_str2 = "{\"RootA\":\"Value in parent node\",\"ChildNode\":{\"ChildA\":\"String Value\",\"ChildB\":42}}";
+	test_push_back();
 
-	//JsonTestWrapper* r_j = parse_rapidjson(json_str);
-	//std::string r_s = r_j->Write();
-	//std::cout << r_s.c_str() << std::endl;
-
-	//JsonTestWrapper* l_j = parse_libjson(json_str);
-	//std::string l_s = l_j->Write();
-	//std::cout << l_s.c_str() << std::endl;
-
-	int sm_parse_c = 100000;
-	int sm_write_c = 100000;
-	int bg_parse_c = 3000;
-	int bg_write_c = 3000;
-
-	std::vector< std::string > json_data_1 =
+	int base_count = 50000;
+	std::vector< test_def > test_defs =
 	{
-		R"(data/glossary.json)",	// 0.6k
-		R"(data/webapp.json)",		// 3.5k
-		R"(data/menu.json)",		// 0.9k
-		R"(data/webapp.json)",		// 3.5k
-		R"(data/widget.json)",		// 0.6k
-		R"(data/webapp.json)",		// 3.5k
-	};
-	std::vector< std::string > json_data_2 =
-	{
-		R"(data/glossary.json)",	// 0.6k
-		R"(data/menu.json)",		// 0.9k
-		R"(data/widget.json)",		// 0.6k
-		R"(data/webapp.json)",		// 3.5k
-		R"(data2/sample.json)",		// 687k
+		{ "data-common", 1, base_count, base_count },
+		{ "data-_5k", 0.5, base_count, base_count },
+		{ "data-08k", 8, base_count, base_count },
+		{ "data-32k", 32, base_count, base_count },
+		{ "data-99k", 220, base_count, base_count },
 	};
 
-	json_tester("___memcpy_small", parse_memcpy, json_data_1, sm_parse_c, sm_write_c);
-	json_tester("rapidjson_small", parse_rapidjson, json_data_1, sm_parse_c, sm_write_c);
-	json_tester("__libjson_small", parse_libjson, json_data_1, sm_parse_c, sm_write_c);
-	json_tester("__jsoncpp_small", parse_jsoncpp, json_data_1, sm_parse_c, sm_write_c);
+	std::vector< lib_def > lib_defs =
+	{
+		{ "___memcpy", parse_memcpy },
+		{ "rapidjson", parse_rapidjson },
+		{ "__libjson", parse_libjson },
+		{ "__jsoncpp", parse_jsoncpp },
+	};
 
-	json_tester("___memcpy_big", parse_memcpy, json_data_2, bg_parse_c, bg_write_c);
-	json_tester("rapidjson_big", parse_rapidjson, json_data_2, bg_parse_c, bg_write_c);
-	json_tester("__libjson_big", parse_libjson, json_data_2, bg_parse_c, bg_write_c);
-	json_tester("__jsoncpp_big", parse_jsoncpp, json_data_2, bg_parse_c, bg_write_c);
+	std::cout << "lib/size, parse, write" << std::endl;
+
+	for (auto& test : test_defs)
+	{
+		for (auto& lib : lib_defs)
+		{
+				
+			int parse_c = test.parse_count;
+			int write_c = test.write_count;
+#ifdef _DEBUG
+			parse_c = parse_c / 1000;
+			write_c = write_c / 1000;
+#endif
+			parse_c = parse_c / test.json_size_in_kb;
+			write_c = write_c / test.json_size_in_kb;
+
+			json_tester(lib.lib_name + std::string("_") + test.json_dir, lib.json_f, test.json_dir, parse_c, write_c);
+		}
+	}
 
 	return 0;
 }

@@ -4,47 +4,6 @@
 #include "libjason/libjson.h"
 
 
-void ParseJSON(const JSONNode & n){
-	JSONNode::const_iterator i = n.begin();
-	while (i != n.end()){
-		// recursively call ourselves to dig deeper into the tree
-		if (i->type() == JSON_ARRAY || i->type() == JSON_NODE){
-			ParseJSON(*i);
-		}
-
-		// get the node name and value as a string
-		std::string node_name = i->name();
-		std::string rootA;
-		std::string childA;
-		int childB;
-
-		// find out where to store the values
-		if (node_name == "RootA"){
-			rootA = i->as_string();
-		}
-		else if (node_name == "ChildA"){
-			childA = i->as_string();
-		}
-		else if (node_name == "ChildB")
-			childB = i->as_int();
-
-		//increment the iterator
-		++i;
-	}
-}
-
-int test_libjson(const std::string& json_str)
-{
-	// std::string json = "{\"RootA\":\"Value in parent node\",\"ChildNode\":{\"ChildA\":\"String Value\",\"ChildB\":42}}";
-	JSONNode n = libjson::parse(json_str);
-	ParseJSON(n);
-
-	// std::string jc = n.write_formatted();
-	std::string jc = n.write();
-	std::cout << jc << std::endl;
-	return 0;
-}
-
 class JsonTestWrapper_libjson : public JsonTestWrapper
 {
 public:
@@ -59,7 +18,7 @@ public:
 	}
 	std::string Write() override
 	{
-		return obj_.write();
+		return obj_.write(this->json_str_.size());
 	}
 
 private:

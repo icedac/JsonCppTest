@@ -1,0 +1,17 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "0041237c-ceb4-4ee2-8cf1-20f9956dcdef", 
+        "name": "Castro Serrano", 
+        "randomArrayItem": "apple", 
+        "gender": "male", 
+        "age": 26, 
+        "longitude": 64.779818000000006, 
+        "email": "castroserrano@isbol.com", 
+        "latitude": -74.331738000000001, 
+        "balance": "$2,022.00", 
+        "company": "Isbol", 
+        "id": 0, 
+        "isActive": true
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "c7c41e7e-fc73-4794-a667-deb4f7e1109e", 
+        "name": "Baldwin Curtis", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "nisi", 
+            "ipsum", 
+            "dolor", 
+            "est", 
+            "magna", 
+            "incididunt", 
+            "minim"
+        ], 
+        "gender": "male", 
+        "age": 34, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Deidre Cannon"
+            }, 
+            {
+                "id": 1, 
+                "name": "Miller Ryan"
+            }, 
+            {
+                "id": 2, 
+                "name": "Lancaster Gibbs"
+            }
+        ], 
+        "longitude": 0.74819800000000003, 
+        "email": "baldwincurtis@interodeo.com", 
+        "phone": "+1 (996) 581-2982", 
+        "latitude": 84.104713000000004, 
+        "balance": "$2,781.00", 
+        "company": "Interodeo", 
+        "id": 0, 
+        "isActive": false
+    }
+]

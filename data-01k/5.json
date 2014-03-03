@@ -1,0 +1,41 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "027b2c5e-9b12-4f53-add7-6a1ddf7038aa", 
+        "name": "Bass Stanton", 
+        "randomArrayItem": "lemon", 
+        "tags": [
+            "elit", 
+            "ad", 
+            "irure", 
+            "et", 
+            "cillum", 
+            "nisi", 
+            "exercitation"
+        ], 
+        "gender": "male", 
+        "age": 28, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Margret Berg"
+            }, 
+            {
+                "id": 1, 
+                "name": "Amber Hardy"
+            }, 
+            {
+                "id": 2, 
+                "name": "Jenkins White"
+            }
+        ], 
+        "longitude": 57.567979999999999, 
+        "email": "bassstanton@idetica.com", 
+        "phone": "+1 (908) 440-3093", 
+        "latitude": -66.055668999999995, 
+        "balance": "$1,691.00", 
+        "company": "Idetica", 
+        "id": 0, 
+        "isActive": true
+    }
+]

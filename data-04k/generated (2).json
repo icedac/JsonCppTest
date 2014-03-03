@@ -1,0 +1,166 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "0f2d8be8-7c69-4b04-a827-8570a263a267", 
+        "name": "Carver Sweet", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "consequat", 
+            "nostrud", 
+            "dolore", 
+            "non", 
+            "nulla", 
+            "occaecat", 
+            "adipisicing"
+        ], 
+        "gender": "male", 
+        "age": 37, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Schneider Wall"
+            }, 
+            {
+                "id": 1, 
+                "name": "Monique Barker"
+            }, 
+            {
+                "id": 2, 
+                "name": "Lawson Delaney"
+            }
+        ], 
+        "registered": "2007-07-18T13:50:54 -09:00", 
+        "longitude": 6.0391870000000001, 
+        "email": "carversweet@deepends.com", 
+        "phone": "+1 (965) 500-2597", 
+        "address": "957 Voorhies Avenue, Welch, Arizona, 3419", 
+        "latitude": 62.658168000000003, 
+        "balance": "$3,618.00", 
+        "company": "Deepends", 
+        "id": 0, 
+        "isActive": true
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "3f8e8f06-fccb-486f-b337-ff2872838b78", 
+        "name": "Valarie Garcia", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "aliquip", 
+            "consectetur", 
+            "est", 
+            "adipisicing", 
+            "duis", 
+            "sit", 
+            "nisi"
+        ], 
+        "gender": "female", 
+        "age": 25, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Marion Livingston"
+            }, 
+            {
+                "id": 1, 
+                "name": "Mccarthy Guy"
+            }, 
+            {
+                "id": 2, 
+                "name": "Eunice Hart"
+            }
+        ], 
+        "registered": "1996-05-16T10:53:34 -09:00", 
+        "longitude": 66.243666000000005, 
+        "email": "valariegarcia@besto.com", 
+        "phone": "+1 (863) 430-2114", 
+        "address": "210 Wolcott Street, Jardine, Nevada, 5525", 
+        "latitude": 55.824724000000003, 
+        "balance": "$3,602.00", 
+        "company": "Besto", 
+        "id": 1, 
+        "isActive": true
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "4bc17da5-7692-405f-b892-1decb3a0c55a", 
+        "name": "Katheryn Pate", 
+        "randomArrayItem": "lemon", 
+        "tags": [
+            "exercitation", 
+            "ipsum", 
+            "ullamco", 
+            "culpa", 
+            "magna", 
+            "sit", 
+            "duis"
+        ], 
+        "gender": "female", 
+        "age": 30, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Adele Mathews"
+            }, 
+            {
+                "id": 1, 
+                "name": "Ginger Calderon"
+            }, 
+            {
+                "id": 2, 
+                "name": "Carly Cannon"
+            }
+        ], 
+        "registered": "1995-11-01T03:47:22 -09:00", 
+        "longitude": -109.780726, 
+        "email": "katherynpate@polarax.com", 
+        "phone": "+1 (896) 535-3551", 
+        "address": "659 Rochester Avenue, Walker, Nebraska, 8952", 
+        "latitude": 78.624902000000006, 
+        "balance": "$3,685.00", 
+        "company": "Polarax", 
+        "id": 2, 
+        "isActive": true
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "59ecc779-a7fb-4f0e-9e82-4dc15761f64b", 
+        "name": "Shelby Padilla", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "sit", 
+            "qui", 
+            "id", 
+            "excepteur", 
+            "cupidatat", 
+            "sint", 
+            "sit"
+        ], 
+        "gender": "female", 
+        "age": 25, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Rosemary Hogan"
+            }, 
+            {
+                "id": 1, 
+                "name": "Rosalinda White"
+            }, 
+            {
+                "id": 2, 
+                "name": "Donna Gentry"
+            }
+        ], 
+        "registered": "2008-04-12T01:59:37 -09:00", 
+        "longitude": 69.099723999999995, 
+        "email": "shelbypadilla@comstar.com", 
+        "phone": "+1 (980) 502-2314", 
+        "address": "212 Aitken Place, Bynum, Oklahoma, 4531", 
+        "latitude": -55.054217000000001, 
+        "balance": "$1,673.00", 
+        "company": "Comstar", 
+        "id": 3, 
+        "isActive": true
+    }
+]

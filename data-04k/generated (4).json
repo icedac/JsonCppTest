@@ -1,0 +1,166 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "541fb58b-8b26-4ffd-88a9-c44620edd99c", 
+        "name": "Doris Stout", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "in", 
+            "Lorem", 
+            "adipisicing", 
+            "officia", 
+            "reprehenderit", 
+            "deserunt", 
+            "et"
+        ], 
+        "gender": "female", 
+        "age": 31, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Kent Woodward"
+            }, 
+            {
+                "id": 1, 
+                "name": "Mercado Woodard"
+            }, 
+            {
+                "id": 2, 
+                "name": "Valarie Sweet"
+            }
+        ], 
+        "registered": "1990-05-07T00:37:05 -09:00", 
+        "longitude": 1.459748, 
+        "email": "dorisstout@primordia.com", 
+        "phone": "+1 (911) 420-2786", 
+        "address": "326 Bethel Loop, Noxen, Wyoming, 3159", 
+        "latitude": -8.0771599999999992, 
+        "balance": "$3,107.00", 
+        "company": "Primordia", 
+        "id": 0, 
+        "isActive": false
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "6b0a45a6-47bb-4d6d-b786-8b3b689ff868", 
+        "name": "Hazel Gilbert", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "excepteur", 
+            "commodo", 
+            "laboris", 
+            "incididunt", 
+            "dolore", 
+            "enim", 
+            "voluptate"
+        ], 
+        "gender": "female", 
+        "age": 27, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Lakisha Warner"
+            }, 
+            {
+                "id": 1, 
+                "name": "Agnes Nieves"
+            }, 
+            {
+                "id": 2, 
+                "name": "Cooke Aguirre"
+            }
+        ], 
+        "registered": "2009-11-21T18:13:29 -09:00", 
+        "longitude": -111.80365500000001, 
+        "email": "hazelgilbert@ontagene.com", 
+        "phone": "+1 (997) 401-2552", 
+        "address": "681 Dennett Place, Newcastle, North Carolina, 1125", 
+        "latitude": -12.366407000000001, 
+        "balance": "$1,612.00", 
+        "company": "Ontagene", 
+        "id": 1, 
+        "isActive": true
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "3c17056f-5c0e-4a70-821f-b4e33bf01705", 
+        "name": "Duke Long", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "eu", 
+            "est", 
+            "nisi", 
+            "non", 
+            "eu", 
+            "eiusmod", 
+            "consectetur"
+        ], 
+        "gender": "male", 
+        "age": 37, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Emilia Castro"
+            }, 
+            {
+                "id": 1, 
+                "name": "Mcneil Leach"
+            }, 
+            {
+                "id": 2, 
+                "name": "Ratliff Rivas"
+            }
+        ], 
+        "registered": "2005-06-22T00:35:03 -09:00", 
+        "longitude": -1.7161630000000001, 
+        "email": "dukelong@webiotic.com", 
+        "phone": "+1 (870) 408-2215", 
+        "address": "409 Gain Court, Maxville, Texas, 5606", 
+        "latitude": 27.068406, 
+        "balance": "$3,474.00", 
+        "company": "Webiotic", 
+        "id": 2, 
+        "isActive": true
+    }, 
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "4803b614-e78c-4460-aab7-517cc2359e8e", 
+        "name": "Jimmie Craig", 
+        "randomArrayItem": "apple", 
+        "tags": [
+            "dolor", 
+            "excepteur", 
+            "qui", 
+            "occaecat", 
+            "aliqua", 
+            "pariatur", 
+            "et"
+        ], 
+        "gender": "female", 
+        "age": 29, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Hodge Ford"
+            }, 
+            {
+                "id": 1, 
+                "name": "Maricela Mcclure"
+            }, 
+            {
+                "id": 2, 
+                "name": "Desiree Barr"
+            }
+        ], 
+        "registered": "2009-01-07T05:21:57 -09:00", 
+        "longitude": -140.00371100000001, 
+        "email": "jimmiecraig@magnafone.com", 
+        "phone": "+1 (837) 454-3483", 
+        "address": "404 Willoughby Avenue, Aurora, Tennessee, 2007", 
+        "latitude": 0.87269799999999997, 
+        "balance": "$2,485.00", 
+        "company": "Magnafone", 
+        "id": 3, 
+        "isActive": true
+    }
+]

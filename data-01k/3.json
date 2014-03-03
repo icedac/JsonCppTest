@@ -1,0 +1,41 @@
+[
+    {
+        "picture": "http://placehold.it/32x32", 
+        "guid": "59b8dcb7-7385-430d-806f-46329812df97", 
+        "name": "Catalina Bauer", 
+        "randomArrayItem": "cherry", 
+        "tags": [
+            "Lorem", 
+            "nulla", 
+            "ad", 
+            "tempor", 
+            "proident", 
+            "do", 
+            "exercitation"
+        ], 
+        "gender": "female", 
+        "age": 34, 
+        "friends": [
+            {
+                "id": 0, 
+                "name": "Emily Jackson"
+            }, 
+            {
+                "id": 1, 
+                "name": "Lela Roberson"
+            }, 
+            {
+                "id": 2, 
+                "name": "Luella Stewart"
+            }
+        ], 
+        "longitude": 127.946135, 
+        "email": "catalinabauer@quarx.com", 
+        "phone": "+1 (963) 518-2001", 
+        "latitude": -70.978919000000005, 
+        "balance": "$2,234.00", 
+        "company": "Quarx", 
+        "id": 0, 
+        "isActive": false
+    }
+]
