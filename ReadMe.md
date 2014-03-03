@@ -16,8 +16,17 @@ following json lib for c++ tested.
 - rapidjson - https://code.google.com/p/rapidjson/
 - jsoncpp - http://sourceforge.net/projects/jsoncpp/
 
-##results:
+##test methods:
+- parsing from json string: 1
+- writing to string: 1
+
+##results graph:
 
 ﻿![](https://raw.github.com/icedac/JsonCppTest/master/result.png)
 ﻿
 
+##conclusion
+
+- winner: rapidjson
+- rapidjson 2.5x to 4.0x faster than libjson (2.5x for 0.5k bytes json files, 4.0x for 200k bytes json files)
+- rapidjson 3x to 4.5x faster than jsoncpp
