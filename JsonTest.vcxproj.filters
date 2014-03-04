@@ -14,17 +14,17 @@
     <Filter Include="src\deps\rapidjson">
       <UniqueIdentifier>{995b73c9-bf50-41a4-b788-700f8421f23b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\deps\libjason">
-      <UniqueIdentifier>{568e3e1b-ee48-42d4-9fd5-382191b24ef0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\deps\libjason\Source">
-      <UniqueIdentifier>{4281cfe1-f757-4696-a33d-33a062aa4cae}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\deps\jsoncpp">
       <UniqueIdentifier>{9f7ea376-136b-49b8-b40b-1b8966f3db85}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\deps\jsoncpp\src">
       <UniqueIdentifier>{645b1fb7-961a-4ee8-93f5-a3ce65d4710e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\libjson">
+      <UniqueIdentifier>{8e849060-f860-4fd3-b729-6dcaf4b1b925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\deps\libjson\src">
+      <UniqueIdentifier>{9b7d3ea2-a7f7-462d-9289-5312a21c86e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -55,12 +55,6 @@
     <ClInclude Include="deps\rapidjson\writer.h">
       <Filter>src\deps\rapidjson</Filter>
     </ClInclude>
-    <ClInclude Include="deps\libjason\JSONOptions.h">
-      <Filter>src\deps\libjason</Filter>
-    </ClInclude>
-    <ClInclude Include="deps\libjason\libjson.h">
-      <Filter>src\deps\libjason</Filter>
-    </ClInclude>
     <ClInclude Include="json_test.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -88,6 +82,12 @@
     <ClInclude Include="deps\json\writer.h">
       <Filter>src\deps\jsoncpp</Filter>
     </ClInclude>
+    <ClInclude Include="deps\libjson\JSONOptions.h">
+      <Filter>src\deps\libjson</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\libjson\libjson.h">
+      <Filter>src\deps\libjson</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JsonTest.cpp">
@@ -95,48 +95,6 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\internalJSONNode.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONAllocator.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONChildren.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONDebug.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONIterators.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONMemory.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONNode.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONNode_Mutex.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONPreparse.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONStream.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONValidator.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONWorker.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\JSONWriter.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\libjason\Source\libjson.cpp">
-      <Filter>src\deps\libjason\Source</Filter>
     </ClCompile>
     <ClCompile Include="test_libjson.cpp">
       <Filter>src</Filter>
@@ -161,6 +119,48 @@
     </ClCompile>
     <ClCompile Include="test_memcpy.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\internalJSONNode.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONAllocator.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONChildren.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONDebug.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONIterators.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONMemory.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONNode.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONNode_Mutex.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONPreparse.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONStream.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONValidator.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONWorker.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\JSONWriter.cpp">
+      <Filter>src\deps\libjson\src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\libjson\Source\libjson.cpp">
+      <Filter>src\deps\libjson\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

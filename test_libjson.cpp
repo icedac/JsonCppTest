@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "json_test.h"
 #include <iostream>
-#include "libjason/libjson.h"
+#include "libjson/libjson.h"
 
 
 class JsonTestWrapper_libjson : public JsonTestWrapper
