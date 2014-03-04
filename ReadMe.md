@@ -6,7 +6,7 @@
 
 - Windows 7 x64
 - Intel Core i7 4770K Quad-core / 16GB Ram
-- Visual Studio 2013
+- Visual Studio 2013 / compiled x64 binary with /O2
 
 ##tested libraries.
 
@@ -15,6 +15,8 @@ following json lib for c++ tested.
 - libjson - http://sourceforge.net/projects/libjson/
 - rapidjson - https://code.google.com/p/rapidjson/
 - jsoncpp - http://sourceforge.net/projects/jsoncpp/
+
+- most json files generated from http://www.json-generator.com/
 
 ##test methods:
 - parsing from json string: 1

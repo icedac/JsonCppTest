@@ -18,7 +18,7 @@ void test_push_back()
 	start = std::chrono::high_resolution_clock::now();
 	for (int j = 0; j < 100; ++j)
 	{
-		test_s = "";
+		test_s.resize(0);
 		for (int i = 0; i < SIZE; ++i)
 		{
 			test_s.push_back('a' + (i % 10));
@@ -57,3 +57,27 @@ void test_push_back()
 	end = std::chrono::high_resolution_clock::now();
 	std::cout << "[" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "]msec\n";
 }
+
+#ifndef _MSC_VER
+
+// Check GCC
+#if __GNUC__
+#if __x86_64__ || __ppc64__
+#define WIN_64
+#else
+#define WIN_32
+#endif
+#endif
+
+int main()
+{
+#ifdef WIN_64
+	std::cout << "gcc 4.8.2 x64" << std::endl;
+#else
+	std::cout << "gcc 4.8.2 x86" << std::endl;
+#endif
+	test_push_back();
+	return 0;
+}
+#endif
+

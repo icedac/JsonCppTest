@@ -14,43 +14,7 @@
 // tr2 filesystem
 #include <filesystem>
 
-/*
-*/
-class JsonTestWrapper_memcpy : public JsonTestWrapper
-{
-public:
-	JsonTestWrapper_memcpy() {}
-	~JsonTestWrapper_memcpy() {}
-
-	bool Parse() override
-	{
-		std::vector<char> buffer(json_str_.begin(), json_str_.end());
-		buffer.push_back('\0');
-		buffer_.swap(buffer);
-
-		return true;
-	}
-	std::string Write() override
-	{
-		std::string s;
-		s.reserve(buffer_.size() + 1);
-		//for (int i = 0; i < 50; ++i )
-		//	s += "0123456789";
-		s = buffer_.data();
-		return s;
-	}
-
-private:
-	std::vector< char > buffer_;
-};
-
-JsonTestWrapper* parse_memcpy(const std::string& json_str)
-{
-	JsonTestWrapper* j = new JsonTestWrapper_memcpy();
-	j->SetJsonString(json_str);
-	return j;
-}
-
+JsonTestWrapper* parse_memcpy(const std::string& json_str);
 JsonTestWrapper* parse_rapidjson(const std::string& json_str);
 JsonTestWrapper* parse_libjson(const std::string& json_str);
 JsonTestWrapper* parse_jsoncpp(const std::string& json_str);
@@ -59,7 +23,7 @@ typedef std::function< JsonTestWrapper* (const std::string&) > parse_json_f;
 using std::tr2::sys::path;
 using std::tr2::sys::directory_iterator;
 
-void json_tester(const std::string& name, parse_json_f parse_json, const std::string& json_dir, int parse_count, int write_count, int csv_mode = 1 )
+void json_tester(const std::string& name, parse_json_f parse_json, const std::string& json_dir, const int parse_count, const int write_count, const int csv_mode = 1)
 {
 	// iterates dir files;
 	std::vector< std::string > json_files;
@@ -167,9 +131,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	std::cout << "lib/size, parse, write" << std::endl;
 
-	for (auto& test : test_defs)
+	for (const auto& test : test_defs)
 	{
-		for (auto& lib : lib_defs)
+		for (const auto& lib : lib_defs)
 		{
 				
 			int parse_c = test.parse_count;
